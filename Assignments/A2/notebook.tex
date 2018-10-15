@@ -393,54 +393,54 @@ Optimization terminated successfully.
     \subsection{(a)}\label{a}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{IncomeIntel} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IncomeIntel.txt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{k+kc}{None}\PY{p}{)}
-        \PY{n}{IncomeIntel\PYZus{}ary}  \PY{o}{=} \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{values}
-        \PY{n}{gre\PYZus{}qnt} \PY{o}{=} \PY{n}{IncomeIntel\PYZus{}ary}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}
-        \PY{n}{salary\PYZus{}p4} \PY{o}{=} \PY{n}{IncomeIntel\PYZus{}ary}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}
-        \PY{n}{x} \PY{o}{=}  \PY{n}{sm}\PY{o}{.}\PY{n}{add\PYZus{}constant}\PY{p}{(}\PY{n}{gre\PYZus{}qnt}\PY{p}{)}
-        
-        \PY{n}{model\PYZus{}incomeintel} \PY{o}{=} \PY{n}{sm}\PY{o}{.}\PY{n}{OLS}\PY{p}{(}\PY{n}{salary\PYZus{}p4}\PY{p}{,} \PY{n}{x}\PY{p}{)}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{p}{)}
-        
-        \PY{n}{model\PYZus{}incomeintel}\PY{o}{.}\PY{n}{summary}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{IncomeIntel} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IncomeIntel.txt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{k+kc}{None}\PY{p}{)}
+         \PY{n}{IncomeIntel\PYZus{}ary}  \PY{o}{=} \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{values}
+         \PY{n}{gre\PYZus{}qnt} \PY{o}{=} \PY{n}{IncomeIntel\PYZus{}ary}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{salary\PYZus{}p4} \PY{o}{=} \PY{n}{IncomeIntel\PYZus{}ary}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{n}{x} \PY{o}{=}  \PY{n}{sm}\PY{o}{.}\PY{n}{add\PYZus{}constant}\PY{p}{(}\PY{n}{gre\PYZus{}qnt}\PY{p}{)}
+         
+         \PY{n}{model\PYZus{}incomeintel} \PY{o}{=} \PY{n}{sm}\PY{o}{.}\PY{n}{OLS}\PY{p}{(}\PY{n}{salary\PYZus{}p4}\PY{p}{,} \PY{n}{x}\PY{p}{)}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{model\PYZus{}incomeintel}\PY{o}{.}\PY{n}{summary}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}6}]:} <class 'statsmodels.iolib.summary.Summary'>
-        """
-                                    OLS Regression Results                            
-        ==============================================================================
-        Dep. Variable:                      y   R-squared:                       0.002
-        Model:                            OLS   Adj. R-squared:                  0.001
-        Method:                 Least Squares   F-statistic:                     2.277
-        Date:                Thu, 11 Oct 2018   Prob (F-statistic):              0.132
-        Time:                        14:03:33   Log-Likelihood:                -10507.
-        No. Observations:                1000   AIC:                         2.102e+04
-        Df Residuals:                     998   BIC:                         2.103e+04
-        Df Model:                           1                                         
-        Covariance Type:            nonrobust                                         
-        ==============================================================================
-                         coef    std err          t      P>|t|      [0.025      0.975]
-        ------------------------------------------------------------------------------
-        const       5.902e+04    744.576     79.260      0.000    5.76e+04    6.05e+04
-        x1             1.7423      1.154      1.509      0.132      -0.523       4.008
-        ==============================================================================
-        Omnibus:                        1.692   Durbin-Watson:                   2.028
-        Prob(Omnibus):                  0.429   Jarque-Bera (JB):                1.655
-        Skew:                           0.009   Prob(JB):                        0.437
-        Kurtosis:                       3.198   Cond. No.                     1.71e+03
-        ==============================================================================
-        
-        Warnings:
-        [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-        [2] The condition number is large, 1.71e+03. This might indicate that there are
-        strong multicollinearity or other numerical problems.
-        """
+{\color{outcolor}Out[{\color{outcolor}25}]:} <class 'statsmodels.iolib.summary.Summary'>
+         """
+                                     OLS Regression Results                            
+         ==============================================================================
+         Dep. Variable:                      y   R-squared:                       0.263
+         Model:                            OLS   Adj. R-squared:                  0.262
+         Method:                 Least Squares   F-statistic:                     356.3
+         Date:                Mon, 15 Oct 2018   Prob (F-statistic):           3.43e-68
+         Time:                        12:17:33   Log-Likelihood:                -10673.
+         No. Observations:                1000   AIC:                         2.135e+04
+         Df Residuals:                     998   BIC:                         2.136e+04
+         Df Model:                           1                                         
+         Covariance Type:            nonrobust                                         
+         ==============================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+         ------------------------------------------------------------------------------
+         const       8.954e+04    878.764    101.895      0.000    8.78e+04    9.13e+04
+         x1           -25.7632      1.365    -18.875      0.000     -28.442     -23.085
+         ==============================================================================
+         Omnibus:                        9.118   Durbin-Watson:                   1.424
+         Prob(Omnibus):                  0.010   Jarque-Bera (JB):                9.100
+         Skew:                           0.230   Prob(JB):                       0.0106
+         Kurtosis:                       3.077   Cond. No.                     1.71e+03
+         ==============================================================================
+         
+         Warnings:
+         [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+         [2] The condition number is large, 1.71e+03. This might indicate that there are
+         strong multicollinearity or other numerical problems.
+         """
 \end{Verbatim}
             
     As can be seen from the summary chart, the estimated coefficients are
-\(\beta_0=59020\) and \(\beta_1=1.7423\), the corresponding standard
-errors are 744.576 and 1.154
+\(\beta_0=89540\) and \(\beta_1=-25.7632\), the corresponding standard
+errors are 878.764 and 1.365
 
 \subsection{(b)}\label{b}
 
@@ -451,7 +451,7 @@ errors are 744.576 and 1.154
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}7}]:} <matplotlib.collections.PathCollection at 0x10d219b70>
+{\color{outcolor}Out[{\color{outcolor}7}]:} <matplotlib.collections.PathCollection at 0x111be7e48>
 \end{Verbatim}
             
     \begin{center}
@@ -468,16 +468,16 @@ each year. Instead of using the raw score, we use the relative score,
 which is not affected by the change of scale.
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{columns} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gre\PYZus{}qnt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{columns} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gre\PYZus{}qnt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gre\PYZus{}qnt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{groupby}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{p}{(}\PY{n}{x} \PY{o}{\PYZhy{}} \PY{n}{x}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{)} \PY{o}{/} \PY{n}{x}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gre\PYZus{}qnt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
-        
-        \PY{n}{gre\PYZus{}qnt\PYZus{}new} \PY{o}{=} \PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gre\PYZus{}qnt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}
-        
-        \PY{n}{x\PYZus{}new} \PY{o}{=}  \PY{n}{sm}\PY{o}{.}\PY{n}{add\PYZus{}constant}\PY{p}{(}\PY{n}{gre\PYZus{}qnt\PYZus{}new}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gre\PYZus{}qnt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{groupby}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{p}{(}\PY{n}{x} \PY{o}{\PYZhy{}} \PY{n}{x}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{)} \PY{o}{/} \PY{n}{x}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gre\PYZus{}qnt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         
+         \PY{n}{gre\PYZus{}qnt\PYZus{}new} \PY{o}{=} \PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gre\PYZus{}qnt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}
+         
+         \PY{n}{x\PYZus{}new} \PY{o}{=}  \PY{n}{sm}\PY{o}{.}\PY{n}{add\PYZus{}constant}\PY{p}{(}\PY{n}{gre\PYZus{}qnt\PYZus{}new}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -489,7 +489,7 @@ which is not affected by the change of scale.
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}10}]:} <matplotlib.collections.PathCollection at 0x1c138d94a8>
+{\color{outcolor}Out[{\color{outcolor}10}]:} <matplotlib.collections.PathCollection at 0x1c18204898>
 \end{Verbatim}
             
     \begin{center}
@@ -498,76 +498,79 @@ which is not affected by the change of scale.
     { \hspace*{\fill} \\}
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}11}]:}  \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{groupby}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}28}]:}  \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{groupby}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}11}]:}                 gre\_qnt     salary\_p4
+{\color{outcolor}Out[{\color{outcolor}28}]:}                 gre\_qnt     salary\_p4
          grad\_year                            
-         2001.0    -2.275642e-15  60838.451338
-         2002.0     2.390945e-15  59153.892438
-         2003.0     1.047791e-14  61933.955229
-         2004.0     9.005783e-15  60082.972426
-         2005.0    -3.734387e-15  60446.862671
-         2006.0     3.771875e-15  59879.706881
-         2007.0     1.089172e-14  59527.961768
-         2008.0     8.398765e-17  60204.841721
-         2009.0     1.214036e-15  59972.927510
-         2010.0    -8.756343e-15  60739.635733
-         2011.0     5.998088e-15  59583.988081
-         2012.0    -6.821383e-15  59695.533374
-         2013.0     1.549638e-14  58654.483748
+         2001.0    -2.145470e-15  60710.709145
+         2002.0    -5.716207e-15  63034.403163
+         2003.0     1.826533e-14  64518.742574
+         2004.0    -9.434012e-15  67773.493082
+         2005.0     2.462677e-15  70492.592106
+         2006.0     4.414939e-15  71678.244222
+         2007.0    -1.016791e-14  72133.654215
+         2008.0     2.304073e-15  76432.580321
+         2009.0    -1.651781e-14  79030.629132
+         2010.0    -5.591126e-15  81741.297377
+         2011.0     1.052910e-14  83563.850070
+         2012.0    -7.501034e-15  86012.586076
+         2013.0    -3.110816e-15  87300.521093
 \end{Verbatim}
             
-    From the scatter plot and the chart above, we can see that although very
-slightly, the mean of the salary over years are changing. To make the
-salary data stationary over time, we standardize the salary by the
-following equation:
+    From the scatter plot and the chart above, we can see that the mean of
+the salary over years are changing. To make the salary data stationary
+over time, we first calculate the average growth rate of the salary
+\(g\), and then standardize the salary by the following equation:
 
-\(standardized(salary_{ti}) = salary_{ti} \frac{mean(salary_{2001})}{mean(salary_t)}\)
+\(standardized(salary_{ti}) = salary_{ti} /(1+g)^{t-2001}\)
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{mean2001} \PY{o}{=} \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{groupby}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mf}{2001.0}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+{\color{incolor}In [{\color{incolor}38}]:} \PY{n}{mean\PYZus{}vec} \PY{o}{=} \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{groupby}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}
          
-         \PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{IncomeIntel}\PY{o}{.}\PY{n}{groupby}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{x}\PY{o}{*}\PY{n}{mean2001}\PY{o}{/}\PY{n}{x}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} 
-         \PY{n}{salary\PYZus{}p4\PYZus{}new} \PY{o}{=} \PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}
+         \PY{n}{g} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{(}\PY{n}{mean\PYZus{}vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{p}{]}\PY{o}{\PYZhy{}}\PY{n}{mean\PYZus{}vec}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{o}{/}\PY{n}{mean\PYZus{}vec}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         
+         \PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{+}\PY{n}{g}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grad\PYZus{}year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2001}\PY{p}{)}
+         
+         \PY{n}{salary\PYZus{}p4\PYZus{}new} \PY{o}{=} \PY{n}{IncomeIntel}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{salary\PYZus{}p4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
 \end{Verbatim}
 
 
     \subsection{(d)}\label{d}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{model\PYZus{}incomeintel\PYZus{}new} \PY{o}{=} \PY{n}{sm}\PY{o}{.}\PY{n}{OLS}\PY{p}{(}\PY{n}{salary\PYZus{}p4\PYZus{}new}\PY{p}{,} \PY{n}{x\PYZus{}new}\PY{p}{)}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}39}]:} \PY{n}{model\PYZus{}incomeintel\PYZus{}new} \PY{o}{=} \PY{n}{sm}\PY{o}{.}\PY{n}{OLS}\PY{p}{(}\PY{n}{salary\PYZus{}p4\PYZus{}new}\PY{p}{,} \PY{n}{x\PYZus{}new}\PY{p}{)}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{p}{)}
          
          \PY{n}{model\PYZus{}incomeintel\PYZus{}new}\PY{o}{.}\PY{n}{summary}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}15}]:} <class 'statsmodels.iolib.summary.Summary'>
+{\color{outcolor}Out[{\color{outcolor}39}]:} <class 'statsmodels.iolib.summary.Summary'>
          """
                                      OLS Regression Results                            
          ==============================================================================
-         Dep. Variable:                      y   R-squared:                       0.001
-         Model:                            OLS   Adj. R-squared:                 -0.000
-         Method:                 Least Squares   F-statistic:                    0.7072
-         Date:                Thu, 11 Oct 2018   Prob (F-statistic):              0.401
-         Time:                        14:05:32   Log-Likelihood:                -10518.
-         No. Observations:                1000   AIC:                         2.104e+04
-         Df Residuals:                     998   BIC:                         2.105e+04
+         Dep. Variable:              salary\_p4   R-squared:                       0.000
+         Model:                            OLS   Adj. R-squared:                 -0.001
+         Method:                 Least Squares   F-statistic:                    0.4395
+         Date:                Mon, 15 Oct 2018   Prob (F-statistic):              0.508
+         Time:                        12:22:38   Log-Likelihood:                -10291.
+         No. Observations:                1000   AIC:                         2.059e+04
+         Df Residuals:                     998   BIC:                         2.060e+04
          Df Model:                           1                                         
          Covariance Type:            nonrobust                                         
          ==============================================================================
                           coef    std err          t      P>|t|      [0.025      0.975]
          ------------------------------------------------------------------------------
-         const       6.084e+04    283.227    214.804      0.000    6.03e+04    6.14e+04
-         x1           239.7432    285.086      0.841      0.401    -319.695     799.181
+         const       6.142e+04    225.711    272.117      0.000     6.1e+04    6.19e+04
+         x1          -150.6097    227.193     -0.663      0.508    -596.440     295.221
          ==============================================================================
-         Omnibus:                        1.816   Durbin-Watson:                   2.042
-         Prob(Omnibus):                  0.403   Jarque-Bera (JB):                1.797
-         Skew:                           0.014   Prob(JB):                        0.407
-         Kurtosis:                       3.206   Cond. No.                         1.01
+         Omnibus:                        0.776   Durbin-Watson:                   2.025
+         Prob(Omnibus):                  0.678   Jarque-Bera (JB):                0.687
+         Skew:                           0.059   Prob(JB):                        0.709
+         Kurtosis:                       3.049   Cond. No.                         1.01
          ==============================================================================
          
          Warnings:
@@ -576,10 +579,10 @@ following equation:
 \end{Verbatim}
             
     As can be seen from the summary chart, the estimated coefficients are
-\(\beta_0=60840\) and \(\beta_1=239.7432\), the corresponding standard
-errors are 283.227 and 285.086. \(\beta_0\) and its std don't change
-much but \(\beta_1\) and its std in the new regression are over 100
-times of those in the original regression. That's because the
+\(\beta_0=61420\) and \(\beta_1=-150.6097\), the corresponding standard
+errors are 225.711 and 227.193. \(\beta_0\) and its std don't change
+much but the scale of \(\beta_1\) and its std in the new regression is
+larger than that of the original regression. That's because the
 standardization we did to the GRE quantitative score decreased the scale
 of this data by over 100 times, while the standardization we did to the
 salary didn't change the overall scale of it. Since the coefficient
